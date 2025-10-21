@@ -18,6 +18,8 @@
             align-items: flex-start;
             min-height: 100vh;
             padding: 40px 20px;
+            flex-direction: column;
+            gap: 20px;
         }
 
         form {
@@ -76,15 +78,32 @@
             background-color: #45a049;
         }
 
+        /* Botón volver al inicio */
+        #btnVolver {
+            width: auto;
+            padding: 10px 20px;
+            background-color: #1976d2;
+            margin-bottom: 10px;
+        }
+
+        #btnVolver:hover {
+            background-color: #1565c0;
+        }
+
         /* Responsive */
         @media (max-width: 480px) {
             form {
                 padding: 20px;
             }
+            #btnVolver {
+                width: 100%;
+            }
         }
     </style>
 </head>
 <body>
+
+    <button id="btnVolver" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Volver al inicio</button>
 
     <form action="#" method="POST">
         <h1>Formulario de Inscripción</h1>
@@ -111,3 +130,5 @@
 
 </body>
 </html>
+
+
