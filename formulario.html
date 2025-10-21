@@ -29,6 +29,9 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             max-width: 400px;
             width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
         }
 
         h1 {
@@ -48,7 +51,7 @@
         select {
             width: 100%;
             padding: 10px 12px;
-            margin-bottom: 20px;
+            margin-bottom: 0; /* quitamos para que el gap del form funcione */
             border: 1.5px solid #ccc;
             border-radius: 6px;
             font-size: 1em;
@@ -78,12 +81,10 @@
             background-color: #45a049;
         }
 
-        /* Botón volver al inicio */
         #btnVolver {
-            width: auto;
-            padding: 10px 20px;
+            width: 100%;
             background-color: #1976d2;
-            margin-bottom: 10px;
+            margin-top: 10px;
         }
 
         #btnVolver:hover {
@@ -102,8 +103,6 @@
     </style>
 </head>
 <body>
-
-    <button id="btnVolver" onclick="window.scrollTo({top: 0, behavior: 'smooth'});">Volver al inicio</button>
 
     <form action="#" method="POST">
         <h1>Formulario de Inscripción</h1>
@@ -126,9 +125,8 @@
         </select>
 
         <button type="submit">Enviar Inscripción</button>
+        <button type="button" id="btnVolver" onclick="window.location.href='index.html'">Volver al inicio</button>
     </form>
 
 </body>
 </html>
-
-
